@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400&display=swap");
+@mixin reset {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@mixin centering {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  @include reset;
+  min-height: 100vh;
+}
+header,
+form {
+  min-height: 20vh;
+  @include centering;
+}
+header {
+  #title {
+    font-size: 3rem;
+    font-family: "Poppins", sans-serif;
+    color: white;
+  }
+}
+.todo-container {
+  @include centering;
+}
+.card {
+  .todo-txt {
+    min-width: 30rem;
+  }
+  .select {
+    display: inline;
+    .filter-todo {
+      min-height: 2.8rem;
+      min-width: 10rem;
+      font-size: 1.2rem;
+      padding: 0.5rem;
+      font-family: "Dancing Script", cursive;
+      margin-left: 10px;
+      align-self: center;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  }
+  input {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    border: none;
+    background: white;
+    border-radius: 5px;
+    font-family: "Dancing Script", cursive;
+    cursor: pointer;
+  }
+  button {
+    $btn-color: #2c73d2;
+    @extend input;
+    cursor: pointer;
+    color: $btn-color;
+    clip-path: circle(45% at 50% 50%);
+    transition: clip-path 0.5s ease-in-out;
+    outline: none;
+    &:active {
+      background: #e5e5e5;
+      -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+      -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+      box-shadow: inset 0px 0px 5px #c1c1c1;
+      outline: none;
+    }
+  }
+  &:hover button {
+    clip-path: circle(100%);
+  }
+}
+.fall {
+  transform: translatex(-10rem);
+  opacity: 0;
+}
+
+.fa-trash,
+.fa-check {
+  color: #2c73d2;
+}
+.custom-shape-divider-top-1612710629 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: -1;
+}
+
+.custom-shape-divider-top-1612710629 svg {
+  position: relative;
+  display: block;
+  width: calc(224% + 1.3px);
+  height: 500px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1612710629 .shape-fill {
+  fill: #008ccb;
+}
+
+.todo-container {
+  .todo-list {
+    min-width: 30%;
+    font-family: "Dancing Script", cursive;
+    .todos {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.5rem;
+      list-style: none;
+      // line-break: normal;
+      border-radius: 3px;
+      // margin: 10px;
+      transition: all 0.5s ease-in-out;
+      .todo-item {
+        flex: 1;
+        background: rgba(255, 255, 255, 0.25);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(1.5px);
+        -webkit-backdrop-filter: blur(1.5px);
+        padding: 0.5rem;
+      }
+      .checked-btn,
+      .trash-btn {
+        font-size: 1rem;
+        padding: 0.7rem;
+      }
+    }
+  }
+}
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+@media screen and (max-width: 360px) {
+  body {
+    // background-color: black;
+    input {
+      font-size: 1.2rem !important;
+    }
+    .filter-todo {
+      min-height: 1px;
+    }
+    .card {
+      .todo-txt {
+        min-width: 1rem;
+      }
+    }
+    .todos {
+      font-size: 1.2rem !important;
+      margin: 2px;
+    }
+  }
+}
