@@ -1,0 +1,61 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background-color: #211a1d;
+}
+body > h2 {
+  padding: 1rem 2rem;
+  color: #f8f0fb;
+  font-weight: 800;
+}
+body > section {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 85vh;
+}
+.info-parent .info {
+  border: 2px solid black;
+  padding: 1rem 1rem;
+  border-radius: 10px;
+}
+.info-parent .info p {
+  line-height: 2px;
+}
+body > section section:first-child {
+  background-color: #ffffffa9;
+  padding: 1rem 2rem;
+  margin: 1rem 2rem;
+  width: 50%;
+  border-radius: 10px;
+  box-shadow: 10px 10px 50px 10px rgba(0, 0, 0, 0.459);
+}
+body > section section:first-child label {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+body > section section:last-child {
+  width: 50%;
+}
+body > section section:last-child h3 {
+  text-align: center;
+  font-size: 2rem;
+  color: #f8f0fb;
+  font-weight: 700;
+}
+body > section section .info-parent {
+  display: flex;
+  flex-wrap: wrap;
+}
+body > section section .info-parent div {
+  width: 45%;
+  margin: 10px 10px;
+}
+body > section section .info-parent div p {
+  color: #f8f0fb;
+}
