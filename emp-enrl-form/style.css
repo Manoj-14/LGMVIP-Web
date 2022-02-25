@@ -5,7 +5,7 @@
 }
 body {
   height: 100vh;
-  background-color: #211a1d;
+  background: linear-gradient(75deg, #0aa9ec, rgb(0, 63, 235));
 }
 body > h2 {
   padding: 1rem 2rem;
@@ -16,46 +16,113 @@ body > section {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   width: 100%;
   height: 85vh;
 }
 .info-parent .info {
-  border: 2px solid black;
+  /* border: 2px solid black; */
+  box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.26);
   padding: 1rem 1rem;
   border-radius: 10px;
 }
 .info-parent .info p {
-  line-height: 2px;
+  line-height: 4px;
 }
 body > section section:first-child {
-  background-color: #ffffffa9;
+  background-color: rgb(255, 255, 255);
+  flex-basis: 0;
+  flex-grow: 1;
   padding: 1rem 2rem;
   margin: 1rem 2rem;
   width: 50%;
   border-radius: 10px;
-  box-shadow: 10px 10px 50px 10px rgba(0, 0, 0, 0.459);
+  box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.26);
 }
 body > section section:first-child label {
   font-size: 1.3rem;
   font-weight: 700;
+  color: #3a86ff;
+}
+.form-group input {
+  /* color: #3a86ff; */
+  color: black !important;
+  font-weight: 700;
+  background: linear-gradient(30deg, #0aa8ec77, rgba(255, 255, 255, 0.514));
+  /* border: none; */
+}
+.form-group input::placeholder {
+  color: rgba(0, 0, 0, 0.596) !important;
+}
+body > section section:last-child::-webkit-scrollbar {
+  display: none;
 }
 body > section section:last-child {
-  width: 50%;
+  /* width: 50%; */
+  flex-basis: 0;
+  flex-grow: 1;
+  height: 90%;
+  overflow-y: scroll;
 }
 body > section section:last-child h3 {
   text-align: center;
   font-size: 2rem;
   color: #f8f0fb;
   font-weight: 700;
+  position: relative;
+  top: 0;
+  left: 0;
 }
 body > section section .info-parent {
   display: flex;
   flex-wrap: wrap;
 }
+
 body > section section .info-parent div {
   width: 45%;
   margin: 10px 10px;
+  background-color: #fff;
+  transition: all 500ms linear;
 }
 body > section section .info-parent div p {
   color: #f8f0fb;
+  line-height: 20px !important;
+}
+body > section section .info-parent div p:first-child {
+  color: #3a86ff;
+  font-size: 1.5rem;
+  padding: 5px 0;
+  font-weight: 700;
+  text-align: center;
+}
+body > section section .info-parent div p:not(:first-child) {
+  color: #3a86ff;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.down-btn {
+  position: absolute;
+  bottom: 1rem;
+  width: 3rem;
+  text-align: center;
+  cursor: pointer;
+}
+.down-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-check label {
+  color: black !important;
+}
+.atnDiv {
+  width: max-content;
+  display: flex;
+  gap: 5px;
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+.fall {
+  transform: scale(0);
+  opacity: 0;
 }
